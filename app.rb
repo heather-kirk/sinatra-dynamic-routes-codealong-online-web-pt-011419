@@ -19,7 +19,7 @@ class App < Sinatra::Base
     "Goodbye, #{user_name}."
   end 
   
-  get "/multiply" do 
+  get "/multiply/:number1/:number2" do 
     sum = params[num1] + params[num2]
   end 
 end

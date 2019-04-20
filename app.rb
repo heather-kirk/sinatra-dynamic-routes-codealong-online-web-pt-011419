@@ -1,5 +1,5 @@
 require_relative 'config/environment'
-
+require 'pry'
 class App < Sinatra::Base
 
   # This is a sample static route.
@@ -19,7 +19,8 @@ class App < Sinatra::Base
     "Goodbye, #{user_name}."
   end 
   
-  get "/multiply/:number1/:number2" do 
+  get "/multiply/:number1/:number2" do
+    binding.pry
     @sum = params[:num1] * params[:num2]
   end 
 end
